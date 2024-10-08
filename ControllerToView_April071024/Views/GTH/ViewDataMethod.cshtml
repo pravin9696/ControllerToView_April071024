@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewDataMethod</title>
+</head>
+<body>
+    <div> 
+        <h1>How use ViewData Example</h1>
+        <h3>@ViewData["no"]</h3>
+
+        <hr />
+        <ul>
+            @foreach (var item in (int[])ViewData["NumArray"])
+            {
+                <li>
+                    @item
+                </li>
+            }
+        </ul>
+        <h2>Student information</h2>
+        @foreach (var std in (List<ControllerToView_April071024.Models.student>)ViewData["MyStudList"])
+        {
+              <h6>Roll No : @std.roll Name :@std.name</h6>
+        }
+    </div>
+</body>
+</html>

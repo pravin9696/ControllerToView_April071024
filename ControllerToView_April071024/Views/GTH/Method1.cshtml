@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Method1</title>
+</head>
+<body>
+    <div>
+        @Html.RadioButton("male",true)male
+        <h1>
+            @ViewBag.warje
+        </h1>
+        <h3>Cities are</h3>
+        <ul>
+           @foreach (var item in ViewBag.cityList)
+           {
+               <li>@item</li>
+           }
+        </ul>
+        <h3>Student List</h3>
+          @foreach (var item in ViewBag.mystudents)
+          {
+              <b>@item.roll  @item.name</b><br />
+          }
+    </div>
+</body>
+</html>
