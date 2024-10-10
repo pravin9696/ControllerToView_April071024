@@ -1,0 +1,31 @@
+﻿@model ControllerToView_April071024.Models.student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudReg</title>
+    <link href="~/Content/mystyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @{
+            Html.BeginForm("studreg", "htmlhelperdemo", FormMethod.Post);
+        }
+        @Html.DisplayNameFor(x => x.roll)@Html.TextBoxFor(Model => Model.roll, new {@class="myClass"})<br />
+        @Html.DisplayNameFor(x => x.name)@Html.TextBoxFor(Model => Model.name, new {style="background-color:yellow"})<br />
+        @Html.CheckBoxFor(x=>x.admission)Adission Done <br />
+        @Html.CheckBox("isNewAddmission",true)<br />
+        <input type="submit" value="submit" />
+
+        @{
+            Html.EndForm();
+        }
+    </div>
+</body>
+</html>

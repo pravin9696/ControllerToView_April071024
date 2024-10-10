@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmpReg</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("EmpReg","HTMLhelperDemo",FormMethod.Post))
+        {
+            @Html.Label("Enter Id")@Html.TextBox("empid", "please enter ID", new {style="font-color:white;background-color:green",title="QQQQ"})<br />
+            @Html.Label("Enter Name")@Html.TextBox("empname", "please enter name")<br />
+            <input type="submit" value="submit" />
+        }
+    </div>
+</body>
+</html>
